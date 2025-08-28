@@ -1,33 +1,31 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-:root{
-    --cor-de-fundo:linear-gradient(45deg, yellow, orange);
+:root {
+    --cor-de-fundo: linear-gradient(45deg, rgb(57, 199, 255), rgb(52, 89, 253));
 }
 
-#corpo{
-    background: var(--cor-de-fundo);
-    height: 100vh;
-}
-
-#cabecalho{
+#cabecalho {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
+    place-self: center;
     justify-items: center;
-    padding-top: 20px;
-    background-color: white;
-    height: 100px;
+    padding-top: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 70px;
+    position: fixed;
+    width: 60%;
 }
 
-#cabecalho button{
+.botao_cabe {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight: 900;
-    color: white ;
+    color: white;
     background: var(--cor-de-fundo);
     border: none;
     border-radius: 20px;
@@ -35,9 +33,151 @@
     justify-items: center;
 }
 
-#cabecalho button:hover{
+.botao_cabe:hover {
     transition: .3s;
     font-size: 18px;
     padding: 11px 11px;
-    background:linear-gradient(-40deg, rgb(255, 94, 0), yellow);
+    background: linear-gradient(-40deg, rgb(84, 178, 255), rgb(0, 81, 255));
+}
+
+#menu_botao {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu_ham {
+    display: flex;
+}
+
+.menu_ham ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    list-style: none;
+    position: relative;
+}
+
+.menu_ham ul li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    background: var(--cor-de-fundo);
+    border-radius: 20px;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+}
+
+.menu_ham ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    #menu_botao {
+        display: flex;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+        color: white;
+        background: var(--cor-de-fundo);
+        border: none;
+        border-radius: 25px;
+        padding: 10px 14px;
+        height: 43px;
+    }
+
+    .botao_cabe {
+        display: none;
+    }
+
+    #cabecalho {
+    background: none;
+    position: fixed;
+    place-self: start;
+    justify-items: start;
+    display: grid;
+    grid-template-columns: 35px 200px;
+    padding: 7px 7px;
+}
+#princ {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+img{
+    height: 300px;
+}
+
+#img_inicio{
+    height: 500px;
+}
+
+}
+#img_inicio{
+    padding-bottom: 30px;
+    border: none;
+}
+.foto{
+    padding-top: 30px;
+    text-align: center;
+}
+
+img{
+    border: solid 1px black;
+}
+
+
+#princ {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+    height: 100%;
+    background: var(--cor-de-fundo);
+}
+
+#princ div p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    text-align: justify;
+}
+
+#princ div h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-align: justify;
+}
+
+#rodape{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding: 20px;
+}
+
+#botao_roda {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+    background: var(--cor-de-fundo);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 10px;
+    justify-items: center;
+}
+
+#botao_roda:hover {
+    transition: .3s;
+    font-size: 18px;
+    padding: 11px 11px;
+    background: linear-gradient(-40deg, rgb(84, 178, 255), rgb(0, 81, 255));
 }
